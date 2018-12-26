@@ -6,9 +6,20 @@ from selenium import webdriver
 
 path_home = os.getenv("HOME") #Captura
 
-user = ''
+def acesso():
+    arq = open(path_home+'/LojaSidnei/Avon.txt','r')
+    texto = arq.read()
+    arq.close()
+    vet = texto.split(',')
+    user = vet[0]
+    pwd = vet[1]
+    return user, pwd
 
-pwd = ''
+
+
+user, pwd = acesso()
+
+
 
 driverpath = path_home+'/ProjetoSidnei/chromedriver'
 driver = webdriver.Chrome(driverpath)
