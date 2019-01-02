@@ -174,7 +174,7 @@ for i in lista_produtos2:
         if len(j) == 5:
             lista_produtos_verdadeira.append({'codigo':j[3],'cod_internet':j[2],'custo':j[1],'dados':j})
         elif len(j) == 6:
-            lista_produtos_verdadeira.append({'codigo':j[4],'cod_internet':j[3],'custo':j[2],'dados': j})
+            lista_produtos_verdadeira.append({'codigo':j[4],'cod_internet':j[3],'custo':j[1],'dados': j})
         elif len(j) == 7:
             lista_produtos_verdadeira.append({'codigo':j[5],'cod_internet':j[4],'custo':j[2],'dados': j})
         else:
@@ -240,6 +240,12 @@ with open(path_home+'/ProjetoSidnei/Dados_html/Teste.txt','w') as f:
         #f.write(i[8]+' '+i[5].replace(' ','')+'\n') #Um dos codigos e o preco da revista
         f.write(str(i)+'\n')
 '''
+
+#####DEBUG#####
 for i in produtos2:
     print(i)
+
+#for i in lista_produtos2:
+    #for j in i:
+        #print(j)
 
